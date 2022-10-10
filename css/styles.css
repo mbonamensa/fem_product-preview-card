@@ -152,7 +152,7 @@ main {
   gap: 10px;
   cursor: pointer;
 }
-.product--submit button:hover, .product--submit button:active {
+.product--submit button:hover, .product--submit button:active, .product--submit button:focus {
   background-color: #053624;
 }
 .product--submit img {
