@@ -38,11 +38,11 @@ On hover/focus
 
 #### Mobile view
 
-Normal
-![](./img/mobile-screenshot.png) 
+Light
+![](./img/mobile-screenshot-light.png) 
 
-On hover/focus
-![](./img/mobile-screenshot-active.png)
+Dark
+![](./img/mobile-screenshot-dark.png)
 
 
 ### Links
