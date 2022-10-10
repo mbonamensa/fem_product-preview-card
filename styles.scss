@@ -1,0 +1,320 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+// VARIABLES
+$white: #ffffff;
+$cream: #F2EBE3;
+$blue: #3685ff;
+$black: #000000;
+$light-grayish-blue: #898FA9;
+$dark-blue: #00048d;
+$dark-grayish-blue: #6C7289;
+$dark-cyan: #3C8067;
+$darker-cyan: #053624;
+$darker-blue: #1C232B;
+
+// MIXINS
+@mixin spacing {
+    margin: 20px 0;
+    padding: 0 20px;
+};
+
+@mixin darkmode {
+    @if (darkmode) {
+        @media (prefers-color-scheme: dark) {
+            @content
+        }
+    }
+    
+};
+
+@mixin transition {
+    transition: 0.3s ease-in-out;
+}
+
+// ROOT
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// MAIN STYLES
+body {
+    
+    font-size: 13.5px;
+
+    @include darkmode {
+        background-color: $dark-grayish-blue;
+    }
+
+    @include transition;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#theme-btn {
+    align-self: flex-end;
+    background: $darker-blue;
+    width: 42px;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin: 5px;
+    height: 19px;
+    cursor: pointer;
+    justify-content: flex-start;
+
+    @include darkmode {
+        background: $cream;
+        justify-content: flex-end;
+    }
+
+    @include transition;
+
+    svg {
+        width: 13px;
+        fill: $cream;
+        transition: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        @include darkmode {
+            fill: $darker-blue;
+        }
+    }
+}
+
+.product--container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include darkmode {
+        background-color: $darker-blue;
+    }
+
+    @include transition;
+}
+
+.product--img {
+    background: url(../img/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 230px;
+}
+
+
+.product--text {
+
+    @include spacing;
+    
+    h3, p {
+        color: $dark-grayish-blue;
+    }
+
+    h3, h1, p {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        letter-spacing: 3px;
+        font-size: 13.5px;
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-family: 'Fraunces', sans-serif;
+        color: $darker-blue;
+        line-height: 1.1;
+
+        @include darkmode {
+            color: $cream;
+        }
+
+        @include transition;
+    }
+
+    p {
+        line-height: 1.4;
+    }
+
+}
+
+.product--price {
+
+    @include spacing;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    .product--sale_price {
+        font-size: 28px;
+        font-family: 'Fraunces', sans-serif;
+        color: $dark-cyan;
+    }
+
+    .product--initial_price {
+        text-decoration: line-through;
+        color: $dark-grayish-blue;
+    }
+
+}
+
+.product--submit {
+
+    @include spacing;
+    margin-bottom: 30px;
+
+    button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: $dark-cyan;
+        color: $cream;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; 
+        cursor: pointer;
+
+        &:hover, &:active {
+            background-color: $darker-cyan;
+        }
+    }
+
+    img {
+        width: 15px;
+    }
+}
+
+footer {
+    font-size: 11px; 
+    text-align: center; 
+    padding: 20px 0;
+    color: $black;
+    
+
+    a { 
+        color: $blue;
+        text-decoration: none; 
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include darkmode {
+            color: $dark-blue;
+        }
+
+        @include transition;
+    }
+}
+
+// DARKMODE 
+.darkmode {
+    background-color: $dark-grayish-blue;
+
+    .product--container {
+        background-color: $darker-blue;
+    }
+
+    .product--text h1 {
+        color: $cream;
+    }
+
+    #theme-btn {
+        background: $cream;
+        justify-content: flex-end;
+
+        svg {
+            fill: $darker-blue;
+        }
+    }
+
+    footer a {
+        color: $dark-blue;
+    }
+
+}
+
+// LIGHTMODE
+.lightmode {
+    background-color: $cream;
+
+    .product--container {
+        background-color: $white;
+    }
+
+    .product--text h1 {
+        color: $darker-blue;
+    }
+
+    #theme-btn {
+        background: $darker-blue;
+        justify-content: flex-start;
+
+        svg {
+            fill: $cream;
+        }
+    }
+
+    footer a {
+        color: $blue;
+    }
+
+}
+
+
+// DESKTOP VIEW
+@media (min-width: 545px) {
+
+    .product--container {
+        flex-direction: row;
+    }
+
+    .product--img {
+        flex: 1;
+        background: url(../img/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    }
+    
+    .product--details {
+        padding: 10px;
+        flex: 1;
+
+        h1, h3, p {
+            margin-bottom: 22px;
+        }
+    }
+
+    .product--text h1 {
+        font-size: 35px;
+    }
+
+}
+

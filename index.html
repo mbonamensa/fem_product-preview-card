@@ -4,33 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
-
+  <link rel="stylesheet" href="css/styles.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+  <main>
+    <button id="theme-btn" title="toggle dark or light mode" aria-label="toggle dark or light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z"/></svg>
+    </button>
+    <div class="product--container">
+        <div class="product--img"></div>
+        <!-- <img src="img/image-product-mobile.jpg" alt="product image"> -->
+        
+        <di class="product--details">
+          <div class="product--text">
+            <h3>PERFUME</h3>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+              Perfumer-Creator for the House of CHANEL.
+            </p>
+          </div>
+          <div class="product--price">
+            <p class="product--sale_price">$149.99</p>
+            <p class="product--initial_price">$169.99</p>
+          </div>
+          <div class="product--submit">
+            <button><img src="img/icon-cart.svg">Add to Cart</button>
+          </div>
+        </div>
+      
+      
+    </div>
+    
+  </main>  
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="mbonamensa.netlify.app">Maame Yaa Serwaa Bona-Mensa</a>.
+    </p> 
+  </footer>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
