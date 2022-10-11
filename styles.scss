@@ -114,16 +114,16 @@ main {
     }
 
     @include transition;
-}
 
-.product--img {
-    background: url(../img/image-product-mobile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 230px;
-}
+    picture {
+        flex: 1;
 
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
 
 .product--text {
 
@@ -294,15 +294,6 @@ footer {
 
     .product--container {
         flex-direction: row;
-    }
-
-    .product--img {
-        flex: 1;
-        background: url(../img/image-product-desktop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: auto;
     }
     
     .product--details {

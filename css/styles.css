@@ -79,13 +79,12 @@ main {
     background-color: #1C232B;
   }
 }
-
-.product--img {
-  background: url(../img/image-product-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 230px;
+.product--container picture {
+  flex: 1;
+}
+.product--container picture img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .product--text {
@@ -224,14 +223,6 @@ footer a:hover {
 @media (min-width: 545px) {
   .product--container {
     flex-direction: row;
-  }
-  .product--img {
-    flex: 1;
-    background: url(../img/image-product-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: auto;
   }
   .product--details {
     padding: 10px;
