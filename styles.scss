@@ -44,6 +44,7 @@ $darker-blue: #1C232B;
 body {
     
     font-size: 13.5px;
+    background-color: $cream;
 
     @include darkmode {
         background-color: $dark-grayish-blue;
@@ -106,6 +107,7 @@ main {
     background-color: $white;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: -3px 0px 15px 10px #00000008;
 
     @include darkmode {
         background-color: $darker-blue;
