@@ -39,10 +39,10 @@ On hover/focus
 #### Mobile view
 
 Light
-![](./img/mobile-screenshot-light.png) 
+![](./img/mobile-screenshot-light.jpg) 
 
 Dark
-![](./img/mobile-screenshot-dark.png)
+![](./img/mobile-screenshot-dark.jpg)
 
 
 ### Links
