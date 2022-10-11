@@ -73,6 +73,15 @@ I practiced using mixins throughout my SASS code and I am learning how important
 ```
 My CSS ```background``` properties knowledge was a bit rusty and this project helped me practice.
 
+***This is an update:*** I learnt from the Frontend Mentor community that a better way to render different images for the different screen sizes was to use ```<picture>``` and ```<source>``` elements. The image here is theproduct image which is an important part of the content and therefore should not be set with the CSS ```background-image``` property. Here's how are used it:
+
+```html
+ <picture>
+    <source media="(min-width: 545px)" srcset="./img/image-product-desktop.jpg">
+    <img src="./img/image-product-mobile.jpg" alt="Perfume with green leaf props">
+  </picture> 
+```
+
 ### Continued development
 
 I'm hoping to practice more with other Frontend Mentor challenges
@@ -82,6 +91,7 @@ I'm hoping to practice more with other Frontend Mentor challenges
 
 These resources were useful in helping me build this project
 
+- [HTML Picture Element](https://www.w3schools.com/html/html_images_picture.asp) 
 - [CSS background-size Property](https://www.w3schools.com/cssref/css3_pr_background-size.asp) 
 - [How to Watch for System Dark Mode Changes Using JavaScript and CSS](https://www.section.io/engineering-education/watch-for-system-dark-mode-using-js-css/) 
 
