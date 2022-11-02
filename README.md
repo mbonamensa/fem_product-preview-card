@@ -47,8 +47,8 @@ Dark
 
 ### Links
 
-- Solution URL: [Maame's Product preview card component solution](https://mbonamensa.github.io/fem_qr-code)
-- Live Site URL: [Frontend Mentor | Product preview card by Maame](https://mbonamensa.github.io/fem_qr-code)
+- Solution URL: [Maame's Product preview card component solution](https://github.com/mbonamensa/fem_product-preview-card)
+- Live Site URL: [Frontend Mentor | Product preview card by Maame](https://mbonamensa.github.io/fem_product-preview-card)
 - Figma file: [I created my own figma file](https://www.figma.com/file/VzGvCzlZrMK1dVmumY9NS5/Frontend-Mentor---Product-preview-card-design?node-id=0%3A1)
 
 ## My process
